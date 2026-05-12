@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Dr:Ahmed Omar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('todo')">To-Do List</a></li>
+            <li><a href="#" onclick="showPage('colors')">Color Palette</a></li>
+            <li><a href="#" onclick="showPage('table')">Table Generator</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="page active">
+            <h1>Welcome to Project Portal</h1>
+            <p>Select a tool from the menu above to get started.</p>
+        </section>
+
+        <section id="todo" class="page">
+            <h2>To-Do List</h2>
+            <div class="input-box">
+                <input type="text" id="taskInput" placeholder="Enter a new task...">
+                <button onclick="addTask()">Add Task</button>
+            </div>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section id="colors" class="page">
+            <h2>Color Palette Generator</h2>
+            <p>Click the button to generate fresh color ideas.</p>
+            <button class="btn-action" onclick="generatePalette()">Generate Colors</button>
+            <div id="palette" class="palette-container"></div>
+        </section>
+
+        <section id="table" class="page">
+            <h2>Interactive Table Manager</h2>
+            <div class="table-inputs">
+                <input type="text" id="userName" placeholder="Full Name">
+                <input type="text" id="userJob" placeholder="Job Title">
+                <input type="text" id="userStatus" placeholder="Status (Active/On-Leave)">
+                <button onclick="addRow()">Add to Table</button>
+            </div>
+            <div id="tableContent" class="table-wrapper">
+                </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
